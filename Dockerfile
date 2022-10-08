@@ -56,7 +56,7 @@ EXPOSE $PORT
 
 COPY --from=build /. /
 
-ENTRYPOINT [ "tini", "--" ]
+#ENTRYPOINT [ "tini", "--" ]
 HEALTHCHECK --interval=15s --timeout=3s CMD [ "/usr/local/bin/entrypoint-rhel8.sh", "healthcheck" ]
 CMD [ "/usr/local/bin/entrypoint-rhel8.sh" ]
 
